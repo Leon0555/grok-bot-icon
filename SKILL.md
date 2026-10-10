@@ -2,20 +2,28 @@
 name: grok-bot-icon
 description: 根据照片制作圆脸、黑色胶囊眼、无嘴无鼻的 2D 插画头像。支持单人、情侣配套、人物与宠物合影及已有头像精修。用于用户要求这类头像或继续修改这类头像时；方案讨论不自动生成图片。
 metadata:
-  version: "2.0.1"
+  version: "2.0.2"
 ---
 
 # 圆脸胶囊眼头像
 
-目标是做出与本技能参考成图属于同一套视觉语言的头像，同时保留新对象的识别特征。技能自带成图是视觉依据，不是待替换姓名的人物模板。不要仅凭“Grok 风格”或“机器人”几个词生成金属头、机械关节或电子屏。
+目标是做出与本技能参考成图属于同一套视觉语言的头像，同时保留新对象的识别特征。技能提供的参考成图是视觉依据，不是待替换姓名的人物模板。不要仅凭“Grok 风格”或“机器人”几个词生成金属头、机械关节或电子屏。
 
 ## 开始前：确定本轮要做什么
 
 1. 区分用户照片、待修改成图、风格参考、构图参考。照片提供身份；本技能成图提供画法与几何关系；用户指定的成图提供编辑底稿。不要把三者混为一张参考。
 2. 用户只是讨论配色、衣服或分析问题时，用文字讨论。要求制作、选定方案或要求修改时，执行图像生成／编辑。
 3. 默认做单人头像。用户明确要求与宠物合影时才选宠物模式。情侣通常输出两张独立正方形图，分别制作，不合成一张双人拼图。
-4. 查看 [参考图说明](references/visual-guide.md)。若本地图像缺失，先按其中的说明下载并校验；获取失败时明确告知用户，不能假装已查看。打开适用的图片。生成时把实际图片作为视觉输入传给绘图工具；只在提示词里写本地路径，不能代替图像输入。
+4. 实际查看下方对应构图的参考图：正文已提供原站和镜像外链。GitHub 完整版可读取本地图片；SkillHub 外链版不附带 PNG，本地路径是下载后的保存位置，不能假定文件已存在。按下面的“参考图读取”流程取得图片，再作为实际图像输入交给绘图工具。
 5. 若目标照片或用户指定的编辑底稿无法访问，要求补充图片；不要用技能示例中的人物代替。多人、多宠物且配对关系不明确时先确认对象。
+
+## 参考图读取
+
+各构图段落直接列出参考图外链，均固定到同一 GitHub 提交。优先查看已有本地图片；文件缺失时，从下方原站链接取得图片。国内环境遇到原站读取失败，可改用对应镜像。
+
+可执行 `python3 <技能目录>/scripts/fetch_references.py` 下载并校验三张图；原站失败会自动尝试镜像，国内网络可加 `--mirror-first` 优先镜像。手动下载时按 [图片清单](references/images.json) 校验 SHA-256；更多读取方式见 [参考图说明](references/visual-guide.md)。
+
+下载后实际打开适用图片，并将其作为图像输入传给绘图工具。只把路径、URL 或 Markdown 链接写进提示词，不等于工具收到图像。原站与镜像均失败时明确说明，不能假装已查看，也不能静默退回纯文字猜测；镜像不保证在所有地区可达。
 
 ## 先搭形，再画特征
 
@@ -41,7 +49,7 @@ metadata:
 
 ### 默认：单人倾斜近景
 
-看 `references/single-layout.png` 的中间正方形插画，忽略截图界面。
+[单人构图参考图（原站）](https://raw.githubusercontent.com/Leon0555/grok-bot-icon/73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/single-layout.png) · [国内网络备用镜像](https://cdn.jsdelivr.net/gh/Leon0555/grok-bot-icon@73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/single-layout.png)。查看图中的中间正方形插画，忽略截图界面。本地副本：`references/single-layout.png`；缺失时使用上述外链取得图片。
 
 - 一个角色的大头占据主要空间，保留圆润下巴、短颈及少量衣领肩部。头发可以碰到或超出边缘，不默认裁掉下巴，也不把完整小头缩在画面正中央。
 - 头部轻微顺时针倾斜，画面左眼较高、右眼较低。颈部、衣领和可见肩部沿同一整体姿态衔接；不能只有头歪而身体直立。
@@ -49,7 +57,12 @@ metadata:
 
 ### 按需：人物与宠物贴脸合影
 
-看 `references/pet-man-final.png` 与 `references/pet-woman-final.png`。
+查看以下两张人宠合影参考图：
+
+- [男生与短毛猫（原站）](https://raw.githubusercontent.com/Leon0555/grok-bot-icon/73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/pet-man-final.png) · [国内网络备用镜像](https://cdn.jsdelivr.net/gh/Leon0555/grok-bot-icon@73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/pet-man-final.png)；本地副本：`references/pet-man-final.png`。
+- [女生与长毛猫（原站）](https://raw.githubusercontent.com/Leon0555/grok-bot-icon/73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/pet-woman-final.png) · [国内网络备用镜像](https://cdn.jsdelivr.net/gh/Leon0555/grok-bot-icon@73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/pet-woman-final.png)；本地副本：`references/pet-woman-final.png`。
+
+本地副本缺失时，使用对应外链取得图片。
 
 - 人在右上方靠后，宠物在左下方前景。脸部靠近，宠物一只前爪举到人物脸边，宠物身体自然裁在底边。人物下方有适量脖子与肩胸衣领。
 - 人物向宠物倾斜，画面左眼较低；宠物向人物倾斜，画面左眼较高。它们各有自己的脸部中轴；每个主体内部的眼、脸、耳和颈部要相互协调，不要求两个主体共用一个倾角。

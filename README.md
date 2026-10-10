@@ -29,8 +29,8 @@ python3 /path/to/grok-bot-icon/scripts/fetch_references.py
 
 SkillHub 条目：https://skillhub.cn/skills/user_707a5a31/grok-bot-icon
 
-## 2.0.1
+## 2.0.2
 
-修复 SkillHub 2.0.0 缺少参考图片的问题：添加固定提交的公开图片地址、哈希清单、下载脚本和使用流程。保留 2.0 的视觉与编辑规则。
+将三张参考图的原站与镜像链接直接写入 SKILL.md 对应构图段落，并在正文说明外链版不附带 PNG、本地路径是下载后的副本。沿用 2.0.1 的固定提交、哈希校验与下载脚本，保留视觉与编辑规则。
 
 结构、文件完整性与参考图下载可验证；不同 Agent 和绘图模型的成图一致性仍需实际检查，不承诺像素级匹配。
