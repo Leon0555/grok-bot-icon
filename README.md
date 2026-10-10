@@ -25,7 +25,7 @@
 python3 /path/to/grok-bot-icon/scripts/fetch_references.py
 ```
 
-脚本只从公开 GitHub 地址下载三张固定版本的参考图，按 SHA-256 校验；不上传照片，不需要 GitHub Token，也不会覆盖已有不同内容的图片。网络不可达时会报错，不能声称已查看参考图。也可从 GitHub 完整版复制 `references/` 中的图片。
+脚本只从公开 GitHub 地址下载三张固定版本的参考图，按 SHA-256 校验；不上传照片，不需要 GitHub Token，也不会覆盖已有不同内容的图片。GitHub 读取失败时自动尝试 jsDelivr 镜像。国内网络可加 `--mirror-first` 优先镜像；两处仍不可达时会报错，不能声称已查看参考图。镜像可达性取决于实际网络，不保证国内必达。也可从 GitHub 完整版复制 `references/` 中的图片。
 
 SkillHub 条目：https://skillhub.cn/skills/user_707a5a31/grok-bot-icon
 

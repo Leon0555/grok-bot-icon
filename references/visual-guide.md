@@ -6,13 +6,20 @@
 
 1. 检查下表的本地图片。若缺失，执行 `python3 <技能目录>/scripts/fetch_references.py`。脚本仅依赖 Python 3 标准库，把图片下载到技能的 `references/` 目录，并按 [图片清单](images.json) 中的 SHA-256 校验。已有内容不同的图片不会被覆盖。
 2. 没有 Python 但有下载工具时，使用清单中的完整 URL 下载，核对哈希，再用图像查看工具打开。URL 固定到 GitHub 的具体提交，不使用会变化的分支链接。
-3. 网络不可达、下载失败或无法查看图片时，说明失败；可以让用户提供图片或安装 GitHub 完整版。不能静默退回纯文字猜测，更不能为了取图上传目标照片。
-4. 图片在本地后，仍必须显式作为图像输入交给绘图工具。路径、URL 或 Markdown 链接仅写入提示词，不等于工具收到图像。
+3. 如果处于国内网络、GitHub 直连失败，可使用清单中的 jsDelivr 镜像。脚本在主站失败后自动尝试镜像；也可加 `--mirror-first` 优先镜像，例如 `python3 <技能目录>/scripts/fetch_references.py --mirror-first`。镜像读取同一提交，必须通过同一 SHA-256 校验；可达性随地区与网络变化，不保证国内必达。
+4. 主站与镜像均不可达、下载失败或无法查看图片时，说明失败；可以让用户提供图片或安装 GitHub 完整版。不能静默退回纯文字猜测，更不能为了取图上传目标照片。
+5. 图片在本地后，仍必须显式作为图像输入交给绘图工具。路径、URL 或 Markdown 链接仅写入提示词，不等于工具收到图像。
 
 三张图片的公开下载地址：
 - [single-layout.png](https://raw.githubusercontent.com/Leon0555/grok-bot-icon/73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/single-layout.png)
 - [pet-man-final.png](https://raw.githubusercontent.com/Leon0555/grok-bot-icon/73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/pet-man-final.png)
 - [pet-woman-final.png](https://raw.githubusercontent.com/Leon0555/grok-bot-icon/73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/pet-woman-final.png)
+
+镜像下载地址：
+
+- [single-layout.png](https://cdn.jsdelivr.net/gh/Leon0555/grok-bot-icon@73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/single-layout.png)
+- [pet-man-final.png](https://cdn.jsdelivr.net/gh/Leon0555/grok-bot-icon@73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/pet-man-final.png)
+- [pet-woman-final.png](https://cdn.jsdelivr.net/gh/Leon0555/grok-bot-icon@73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/pet-woman-final.png)
 
 ## 参考范围
 

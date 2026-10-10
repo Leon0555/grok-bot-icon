@@ -4,17 +4,20 @@
     {
       "name": "single-layout.png",
       "url": "https://raw.githubusercontent.com/Leon0555/grok-bot-icon/73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/single-layout.png",
-      "sha256": "3eacacb721b340c30452919b15c1a02c0d008cf0c7bc93bff082fd74378c462a"
+      "sha256": "3eacacb721b340c30452919b15c1a02c0d008cf0c7bc93bff082fd74378c462a",
+      "mirror_url": "https://cdn.jsdelivr.net/gh/Leon0555/grok-bot-icon@73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/single-layout.png"
     },
     {
       "name": "pet-man-final.png",
       "url": "https://raw.githubusercontent.com/Leon0555/grok-bot-icon/73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/pet-man-final.png",
-      "sha256": "155b7b47be0e651641d41e97a417ad8c701f683a809e15b22a909e94dcddefef"
+      "sha256": "155b7b47be0e651641d41e97a417ad8c701f683a809e15b22a909e94dcddefef",
+      "mirror_url": "https://cdn.jsdelivr.net/gh/Leon0555/grok-bot-icon@73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/pet-man-final.png"
     },
     {
       "name": "pet-woman-final.png",
       "url": "https://raw.githubusercontent.com/Leon0555/grok-bot-icon/73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/pet-woman-final.png",
-      "sha256": "a3d035823d554151cc8a2ca9658a6cdd0d7c9143558a438368f09b47648c05e3"
+      "sha256": "a3d035823d554151cc8a2ca9658a6cdd0d7c9143558a438368f09b47648c05e3",
+      "mirror_url": "https://cdn.jsdelivr.net/gh/Leon0555/grok-bot-icon@73f7fcb4b9034af15255c35e3013a4d6fa2dc14e/references/pet-woman-final.png"
     }
   ]
 }
