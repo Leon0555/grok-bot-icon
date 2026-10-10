@@ -1,0 +1,4 @@
+interface:
+  display_name: "圆脸胶囊眼头像"
+  short_description: "依据参考成图制作圆脸胶囊眼头像，支持情侣配套、宠物合影与局部精修"
+  default_prompt: "使用 $grok-bot-icon，先查看技能中的视觉参考，再把我提供的照片制作成同一画风的头像。"
